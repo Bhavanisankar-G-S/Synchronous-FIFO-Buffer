@@ -15,23 +15,6 @@ A high-performance, fully synthesizable **Synchronous FIFO (First-In, First-Out)
 
 ## 📊 Technical Architecture & Interface
 
-### Block Diagram
-
-+---------------------------------------+
-                 |            SYNCHRONOUS FIFO           |
-                 |                                       |
-   data_in ----->| [Write Pointer] ---> [ Memory Array ] |  
- write_enable -->|                               |       |
-                 |                               v       |
-  read_enable -->| [Read Pointer]  ---> [ Output Reg ] |--------- > data_out
-                 |                                       |
-                 |       [ Parallel Status Tracker ]     |
-                 |               /           \           |
-                 +--------------/-------------\----------+
-                               /               \
-                              v                 v
-                            full              empty
-
 ### Signal Description
 
 | Signal Name | Direction | Width | Description |
